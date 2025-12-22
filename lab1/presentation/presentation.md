@@ -40,7 +40,7 @@ header-includes:
 :::
 ::: {.column width="30%"}
 
-![](./image/0.jpg)
+![](./images/0.jpg)
 
 :::
 ::::::::::::::
@@ -57,67 +57,67 @@ header-includes:
 
 ## Установка необходимых приложений
 
-![Установка менеджера пакетов Chocolatey](image/1.png){ #fig:001 width=90% height=90% }
+![Установка менеджера пакетов Chocolatey](images/1.png){ #fig:001 width=90% height=90% }
 
 ## Установка необходимых приложений
 
-![Установка Far Manager](image/2.png){ #fig:002 width=100% height=100% }
+![Установка Far Manager](images/2.png){ #fig:002 width=100% height=100% }
 
 ## Установка необходимых приложений
 
-![Установка Notepad++](image/3.png){ #fig:003 width=100% height=100% }
+![Установка Notepad++](images/3.png){ #fig:003 width=100% height=100% }
 
 ## Установка необходимых приложений
 
-![Установка Julia](image/4.png){ #fig:004 width=100% height=100% }
+![Установка Julia](images/4.png){ #fig:004 width=100% height=100% }
 
 ## Установка необходимых приложений
 
-![Установка Anaconda Distribution (Python 3.x)](image/6.png){ #fig:005 width=100% height=100% }
+![Установка Anaconda Distribution (Python 3.x)](images/6.png){ #fig:005 width=100% height=100% }
 
 ## Установка необходимых пакетов
 
-![Установка пакетов для работы с Jupyter](image/5.png){ #fig:006 width=90% height=90% }
+![Установка пакетов для работы с Jupyter](images/5.png){ #fig:006 width=90% height=90% }
 
 # Основы синтаксиса Julia на примерах
 
 ## Примеры
 
-![Примеры определения типа числовых величин](image/7.png){ #fig:007 width=80% height=80% }
+![Примеры определения типа числовых величин](images/7.png){ #fig:007 width=80% height=80% }
 
 ## Примеры
 
-![Примеры приведения аргументов к одному типу](image/8.png){ #fig:008 width=100% height=100% }
+![Примеры приведения аргументов к одному типу](images/8.png){ #fig:008 width=100% height=100% }
 
 ## Примеры
 
-![Примеры определения функций](image/9.png){ #fig:009 width=100% height=100% }
+![Примеры определения функций](images/9.png){ #fig:009 width=100% height=100% }
 
 ## Примеры 
 
-![Примеры работы с массивами](image/10.png){ #fig:010 width=80% height=80% }
+![Примеры работы с массивами](images/10.png){ #fig:010 width=80% height=80% }
 
 # Самостоятельная работа
 
 ## Примеры для задания №1
 
-![Примеры работы с функциями для чтения/записи/вывода информации на экран](image/11.png){ #fig:011 width=80% height=80% }
+![Примеры работы с функциями для чтения/записи/вывода информации на экран](images/11.png){ #fig:011 width=80% height=80% }
 
 ## Примеры для задания №2
 
-![Пример работы с функцией parse](image/12.png){ #fig:012 width=100% height=100% }
+![Пример работы с функцией parse](images/12.png){ #fig:012 width=100% height=100% }
 
 ## Примеры для задания №3
 
-![Примеры работы базовых математических операций](image/13.png){ #fig:013 width=80% height=80% }
+![Примеры работы базовых математических операций](images/13.png){ #fig:013 width=80% height=80% }
 
 ## Примеры для задания №3
 
-![Примеры работы базовых математических операций](image/14.png){ #fig:014 width=90% height=90% }
+![Примеры работы базовых математических операций](images/14.png){ #fig:014 width=90% height=90% }
 
 ## Примеры для задания №4
 
-![Примеры работы с операциями над матрицами](image/15.png){ #fig:015 width=80% height=80% }
+![Примеры работы с операциями над матрицами](images/15.png){ #fig:015 width=80% height=80% }
 
 # Вывод
 
@@ -131,3 +131,4 @@ header-includes:
 
 
 [[1] Julia Documentation: https://docs.julialang.org/en/v1/
+
