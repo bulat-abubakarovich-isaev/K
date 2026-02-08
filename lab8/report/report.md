@@ -1,14 +1,8 @@
 ---
 ## Front matter
-title: "Отчёт по лабораторной работе №8
-
-
-Компьютерный практикум по статистическому анализу данных"
-subtitle: " Julia. Установка и настройка. Основные принципы."
-author: "Выполнил: Исаев Булат Абубакарович, 
-
-
-НПИбд-01-22, 1132227131"
+title: "Лабораторная работа № 8"
+subtitle: "Оптимизация"
+author: "Исаев Булат Абубакарович"
 
 ## Generic otions
 lang: ru-RU
@@ -22,6 +16,7 @@ csl: pandoc/csl/gost-r-7-0-5-2008-numeric.csl
 toc: true # Table of contents
 toc-depth: 2
 lof: true # List of figures
+lot: false # List of tables
 fontsize: 12pt
 linestretch: 1.5
 papersize: a4
@@ -30,22 +25,24 @@ documentclass: scrreprt
 polyglossia-lang:
   name: russian
   options:
-  - spelling=modern
-  - babelshorthands=true
+	- spelling=modern
+	- babelshorthands=true
 polyglossia-otherlangs:
   name: english
 ## I18n babel
 babel-lang: russian
 babel-otherlangs: english
 ## Fonts
-mainfont: PT Serif
-romanfont: PT Serif
-sansfont: PT Sans
-monofont: PT Mono
-mainfontoptions: Ligatures=TeX
-romanfontoptions: Ligatures=TeX
-sansfontoptions: Ligatures=TeX,Scale=MatchLowercase
-monofontoptions: Scale=MatchLowercase,Scale=0.9
+mainfont: IBM Plex Serif
+romanfont: IBM Plex Serif
+sansfont: IBM Plex Sans
+monofont: IBM Plex Mono
+mathfont: STIX Two Math
+mainfontoptions: Ligatures=Common,Ligatures=TeX,Scale=0.94
+romanfontoptions: Ligatures=Common,Ligatures=TeX,Scale=0.94
+sansfontoptions: Ligatures=Common,Ligatures=TeX,Scale=MatchLowercase,Scale=0.94
+monofontoptions: Scale=MatchLowercase,Scale=0.94,FakeStretch=0.9
+mathfontoptions:
 ## Biblatex
 biblatex: true
 biblio-style: "gost-numeric"
@@ -61,6 +58,7 @@ figureTitle: "Рис."
 tableTitle: "Таблица"
 listingTitle: "Листинг"
 lofTitle: "Список иллюстраций"
+lotTitle: "Список таблиц"
 lolTitle: "Листинги"
 ## Misc options
 indent: true
@@ -72,81 +70,63 @@ header-includes:
 
 # Цель работы
 
-Основная цель работы — подготовить рабочее пространство и инструментарий для 
-работы с языком программирования Julia, на простейших примерах познакомиться 
-с основами синтаксиса Julia.
- 
+Основная цель работы -- освоить пакеты Julia для решения задач оптимизации.
+
+# Задание
+
+1. Используя JupyterLab, повторите примеры.
+
+2. Выполните задания для самостоятельной работы.
+
+# Теоретическое введение
+
+Julia -- высокоуровневый свободный язык программирования с динамической типизацией, созданный для математических вычислений [@julialang]. Эффективен также и для написания программ общего назначения. Синтаксис языка схож с синтаксисом других математических языков, однако имеет некоторые существенные отличия.
+
+Для выполнения заданий была использована официальная документация Julia [@juliadoc].
+
 # Выполнение лабораторной работы
 
-## Подготовка инструментария к работе
+Выполним примеры из лабораторной работы (рис. [-@fig:001]-[-@fig:011]).
 
-Так как мы используем ОС типа Windows для различных установок будем использовать менеджер пакетов
-Chocolatey (https://chocolatey.org/), который устанавим через Administrative Shell (рис. [-@fig:001]):
+![Линейное программирование](images/1.png){#fig:001 width=70%}
 
-![Установка менеджера пакетов Chocolatey](images/1.png){ #fig:001 width=100% height=100% }
+![Векторизованные ограничения и целевая функция оптимизации](images/2.png){#fig:002 width=70%}
 
-Далее посредством установленного менеджера установим Far Manager, Notepad++, Julia,
-Anaconda Distribution (Python 3.x) (рис. [-@fig:002] - рис. [-@fig:005]):
+![Оптимизация рациона питания](images/3.png){#fig:003 width=70%}
 
-![Установка Far Manager](images/2.png){ #fig:002 width=100% height=100% }
+![Оптимизация рациона питания](images/4.png){#fig:004 width=70%}
 
-![Установка Notepad++](images/3.png){ #fig:003 width=100% height=100% }
+![Оптимизация рациона питания](images/5.png){#fig:005 width=70%}
 
-![Установка Julia](images/4.png){ #fig:004 width=100% height=100% }
+![Путешествие по миру](images/6.png){#fig:006 width=70%}
 
-![Установка Anaconda Distribution (Python 3.x)](images/6.png){ #fig:005 width=100% height=100% }
+![Портфельные инвестиции](images/7.png){#fig:007 width=70%}
 
-Сдедующим шагом установим пакеты для работы с Jupyter. Для этого перейдём в пакетный режим
-Julia, нажав на клавиатуре знак закрывающейся квадратной скобки ], затем введём  add IJulia (рис. [-@fig:006]):
+![Портфельные инвестиции](images/8.png){#fig:008 width=70%}
 
-![Установка пакетов для работы с Jupyter](images/5.png){ #fig:006 width=100% height=100% }
+![Восстановление изображения](images/9.png){#fig:009 width=70%}
 
-## Основы синтаксиса Julia на примерах
+![Восстановление изображения](images/10.png){#fig:010 width=70%}
 
-Для начала потренируемся с определением типов числовых величин (рис. [-@fig:007]):
+![Восстановление изображения](images/11.png){#fig:011 width=70%}
 
-![Примеры определения типа числовых величин](images/7.png){ #fig:007 width=100% height=100% }
+Теперь выполним задания для самостоятельный работы (рис. [-@fig:012]-[-@fig:016]).
 
-После чего приступим к рассмотрению приведения аргументов к одному типу (рис. [-@fig:008]):
+![Задание 1. Линейное программирование](images/12.png){#fig:012 width=70%}
 
-![Примеры приведения аргументов к одному типу](images/8.png){ #fig:008 width=100% height=100% }
+![Задание 2. Линейное программирование. Использование массивов](images/13.png){#fig:013 width=70%}
 
-И рассмотрим примеры определения функций (рис. [-@fig:009]), а также работу с массивами (рис. [-@fig:010]):
+![Задание 3. Выпуклое программирование](images/14.png){#fig:014 width=70%}
 
-![Примеры определения функций](images/9.png){ #fig:009 width=100% height=100% }
+![Задание 4. Оптимальная рассадка по залам](images/15.png){#fig:015 width=70%}
 
-![Примеры работы с массивами](images/10.png){ #fig:010 width=100% height=100% }
+![Задание 5. План приготовления кофе](images/16.png){#fig:016 width=70%}
 
-## Самостоятельная работа
+# Выводы
 
-В первом задании ма рассмотрим основные функции для чтения / записи / вывода информации на экран. Для этого
-составим свои примеры (рис. [-@fig:011]):
+В резцльтате выполнения данной лабораторной работы я оосвоила пакеты Julia для решения задач оптимизации.
 
-![Примеры работы с функциями для чтения/записи/вывода информации на экран](images/11.png){ #fig:011 width=100% height=100% }
+# Список литературы{.unnumbered}
 
-Во втором задании состаивим пример для функции parse() (рис. [-@fig:012]):
-
-![Пример работы с функцией parse](images/12.png){ #fig:012 width=100% height=100% }
-
-Далее изучим синтаксис Julia для базовых математических операций с разным типом переменных (рис. [-@fig:013] - рис. [-@fig:014]):
-
-![Примеры работы базовых математических операций](images/13.png){ #fig:013 width=100% height=100% }
-
-![Примеры работы базовых математических операций](images/14.png){ #fig:014 width=100% height=100% }
-
-В конце работы приведём несколько примеров с операциями над матрицами (рис. [-@fig:015]):
-
-![Примеры работы с операциями над матрицами](images/15.png){ #fig:015 width=100% height=100% }
-
-# Вывод
-
-В ходе выполнения лабораторной работы были получены навыки по подготовке рабочего пространства и 
-инструментария для работы с языком программирования Julia, а также познакомились на простейших 
-примерах с основами синтаксиса Julia.
-
-# Список литературы. Библиография
-
-
-[1] Julia Documentation: https://docs.julialang.org/en/v1/
-
-
+::: {#refs}
+:::
